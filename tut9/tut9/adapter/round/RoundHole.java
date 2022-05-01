@@ -1,0 +1,27 @@
+package tut9.adapter.round;
+
+import lombok.AllArgsConstructor;
+
+/**
+ * RoundHoles are compatible with RoundPegs.
+ */
+@AllArgsConstructor
+public class RoundHole {
+    //TO-DO: Declare an attribute: name = radius, type = double
+    private double radius;
+    //TO-DO: Declare the constructor with a parameter
+
+    //TO-DO: Implement getRadius() method
+    public double getRadius() {
+        return radius;
+    }
+
+    //TO-DO: Implement fits() method
+    public boolean fits(RoundPeg peg) {
+        //if getRadius() of RoundHole >= getRadius() of RoundPeg => return true
+        //else return false
+
+        return this.getRadius() >= peg.getRadius();
+
+    }
+}

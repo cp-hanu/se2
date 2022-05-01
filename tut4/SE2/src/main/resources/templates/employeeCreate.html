@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="_layout"
+>
+<body>
+<div layout:fragment="content">
+    <div class="container col-md-5 text-center mt-4">
+        <h2 class="text text-primary mb-4">Create New Employee</h2>
+
+        <form th:action="@{/create}" th:object="${employee}" method="post">
+            <div class="input-group mb-3">
+
+
+            </div>
+            <p>Name: <input type="text" class="form-control" th:field="*{name}"></p>
+            <p>Age: <input type="text" class="form-control" th:field="*{age}"></p>
+            <p>Avatar: <input type="text" class="form-control" th:field="*{imageUrl}"></p>
+            <p>Address: <input type="text" class="form-control" th:field="*{address}"></p>
+            <p>
+                <button type="submit" class="btn btn-success">Create</button>
+            </p>
+        </form>
+    </div>
+</div>
+</body>
+</html>
